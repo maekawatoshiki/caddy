@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
-mncore2_emuenv_url = "https://projects.preferred.jp/mn-core/assets/mncore2_emuenv_20240221.zip"
-mncore2_emuenv = "/tmp/mncore2_emuenv_20240221"
+mncore2_emuenv_url = "https://projects.preferred.jp/mn-core/assets/mncore2_emuenv_20240819.tar.xz"
+mncore2_emuenv = "/tmp/mncore2_emuenv_20240819"
 if !File.exist?(mncore2_emuenv)
   Dir.chdir("/tmp") do
     STDERR.puts "Downloading mncore2_emuenv in #{mncore2_emuenv}..."
     system("curl -O #{mncore2_emuenv_url}")
-    system("unzip mncore2_emuenv_20240221.zip")
+    system("tar xf mncore2_emuenv_20240819.tar.xz")
   end
 end
 
